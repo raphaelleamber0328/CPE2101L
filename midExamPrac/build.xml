@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="midExamPrac">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/java-2025-03/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="21"/>
+    <property name="source" value="21"/>
+    <path id="midExamPrac.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.BestsellerTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.BookstoreCreditTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.CmConversionTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.ElectionTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.EventTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.Main (1).classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.Main (2).classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.Main (3).classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.Main (4).classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.Main.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.MainBestseller.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.MainCmConversion.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.MainRental.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <path id="run.RentalTest.classpath">
+        <path refid="midExamPrac.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="midExamPrac.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="BestsellerTest">
+        <java classname="MidPrac7.BestsellerTest" failonerror="true" fork="yes">
+            <classpath refid="run.BestsellerTest.classpath"/>
+        </java>
+    </target>
+    <target name="BookstoreCreditTest">
+        <java classname="midPrac2.BookstoreCreditTest" failonerror="true" fork="yes">
+            <classpath refid="run.BookstoreCreditTest.classpath"/>
+        </java>
+    </target>
+    <target name="CmConversionTest">
+        <java classname="midPrac5.CmConversionTest" failonerror="true" fork="yes">
+            <classpath refid="run.CmConversionTest.classpath"/>
+        </java>
+    </target>
+    <target name="ElectionTest">
+        <java classname="midPrac4.ElectionTest" failonerror="true" fork="yes">
+            <classpath refid="run.ElectionTest.classpath"/>
+        </java>
+    </target>
+    <target name="EventTest">
+        <java classname="midPrac3.EventTest" failonerror="true" fork="yes">
+            <classpath refid="run.EventTest.classpath"/>
+        </java>
+    </target>
+    <target name="Main (1)">
+        <java classname="midPrac2.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (1).classpath"/>
+        </java>
+    </target>
+    <target name="Main (2)">
+        <java classname="midPrac3.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (2).classpath"/>
+        </java>
+    </target>
+    <target name="Main (3)">
+        <java classname="midPrac4.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (3).classpath"/>
+        </java>
+    </target>
+    <target name="Main (4)">
+        <java classname="midPrac5.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (4).classpath"/>
+        </java>
+    </target>
+    <target name="Main">
+        <java classname="midPrac1.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main.classpath"/>
+        </java>
+    </target>
+    <target name="MainBestseller">
+        <java classname="MidPrac7.MainBestseller" failonerror="true" fork="yes">
+            <classpath refid="run.MainBestseller.classpath"/>
+        </java>
+    </target>
+    <target name="MainCmConversion">
+        <java classname="midPrac5.MainCmConversion" failonerror="true" fork="yes">
+            <classpath refid="run.MainCmConversion.classpath"/>
+        </java>
+    </target>
+    <target name="MainRental">
+        <java classname="midPrac6.MainRental" failonerror="true" fork="yes">
+            <classpath refid="run.MainRental.classpath"/>
+        </java>
+    </target>
+    <target name="RentalTest">
+        <java classname="midPrac6.RentalTest" failonerror="true" fork="yes">
+            <classpath refid="run.RentalTest.classpath"/>
+        </java>
+    </target>
+</project>

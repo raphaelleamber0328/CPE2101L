@@ -1,69 +1,6 @@
 package LE_4;
 import java.util.Scanner;
 
-// CLASS: CashRegister
-class CashRegister {
-    private int cashOnHand;
-
-    // Default constructor
-    public CashRegister() {
-        this.cashOnHand = 500; 
-    }
-
-    // Constructor with parameter
-    public CashRegister(int cashIn) {
-        if (cashIn > 0) {
-            this.cashOnHand = cashIn;
-        } else {
-            this.cashOnHand = 500;
-        }
-    }
-
-    public int getCurrentBalance() {
-        return cashOnHand;
-    }
-
-    public int acceptAmount(int amountIn) {
-        if (amountIn > 0) {
-            cashOnHand += amountIn;
-        }
-        return cashOnHand;
-    }
-}
-
-// CLASS: DispenserType
-class DispenserType {
-    private int numberOfItems;
-    private int cost; 
-
-    // Default constructor
-    public DispenserType() {
-        this.numberOfItems = 50;
-        this.cost = 50; 
-    }
-
-    // Constructor with parameters
-    public DispenserType(int setNoOfItems, int setCost) {
-        this.numberOfItems = setNoOfItems;
-        this.cost = setCost;
-    }
-
-    public int getNoOfItems() {
-        return numberOfItems;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public int makeSale() {
-        if (numberOfItems > 0) {
-            numberOfItems--;
-        }
-        return numberOfItems;
-    }
-}
-
 // MAIN PROGRAM
 public class fruitJuice {
 
