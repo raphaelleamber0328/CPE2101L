@@ -1,9 +1,8 @@
 package LE_4;
 
+// CLASS: DispenserType
 public class DispenserType {
 	
-	// CLASS: DispenserType
-	class DispenserType {
 	    private int numberOfItems;
 	    private int cost; 
 
@@ -34,4 +33,3 @@ public class DispenserType {
 	        return numberOfItems;
 	    }
 	}
-}

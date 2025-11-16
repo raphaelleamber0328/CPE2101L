@@ -1,9 +1,8 @@
 package LE_4;
 
+//CLASS: CashRegister
 public class CashRegister {
 	
-	// CLASS: CashRegister
-	class CashRegister {
 	    private int cashOnHand;
 
 	    // Default constructor
@@ -32,4 +31,3 @@ public class CashRegister {
 	    }
 	}
 
-}
